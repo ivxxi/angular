@@ -33,3 +33,8 @@ const swapNumber = (num1, num2) => {
 };
 swapNum = swapNumber(10, 20);
 console.log(swapNum);
+//any
+//try to avoid using any 
+let department;
+department = 'IT';
+department = 10;

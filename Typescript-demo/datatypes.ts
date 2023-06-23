@@ -54,4 +54,5 @@ console.log(swapNum)
 //try to avoid using any 
 let department : any;
 department = 'IT';
-department = 10;c
+department = 10;
+
