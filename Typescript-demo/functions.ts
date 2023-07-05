@@ -21,6 +21,18 @@ const subtract = (num1:number, num2:number) => num2 - num1;
  let array = [1, 2, 3, 4, 5];
  console.log(addArray(6, 7, ...array)); //#2
 
- console.log(addArray(4, 5, 1, 2, 3)); //#3
+ console.log(addArray(4, 5, 1, 2, 3)); //#3 
 
- 
+// function getItems<T>(items: T[]): T[] {
+ //     return new Array<T>().concat(items);
+ //}
+
+
+ //generic functions
+ const getItems = <Type>(items: Type[]): Type[] => {
+      return new Array<Type>().concat(items);
+ }
+
+ let concatResult = getItems<number>([1, 2, 3, 4, 5]);
+
+ let concatString = getItems<string>(['a', 'b', 'c', 'd', 'e']);
