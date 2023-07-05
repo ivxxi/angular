@@ -14,7 +14,16 @@ console.log(multiply(2, 4));
 const addArray = (num1, num2, ...num3) => {
     return num1 + num2 + num3.reduce((acc, num) => acc + num, 0);
 };
-console.log(addArray(4, 5, ...[1, 2, 3]));
+console.log(addArray(4, 5, ...[1, 2, 3])); //#1
 let array = [1, 2, 3, 4, 5];
-console.log(addArray(6, 7, ...array));
-console.log(addArray(4, 5, 1, 2, 3));
+console.log(addArray(6, 7, ...array)); //#2
+console.log(addArray(4, 5, 1, 2, 3)); //#3 
+// function getItems<T>(items: T[]): T[] {
+//     return new Array<T>().concat(items);
+//}
+//generic functions
+const getItems = (items) => {
+    return new Array().concat(items);
+};
+let concatResult = getItems([1, 2, 3, 4, 5]);
+let concatString = getItems(['a', 'b', 'c', 'd', 'e']);
